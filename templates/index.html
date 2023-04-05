@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>{{title}} - My Orders List</title>
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" >
+        <link href="https://www.waterstones.com/category/crime-thrillers-mystery">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Notable&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Notable&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id= "grid-container">
+           <header>
+            <img src= "{{url_for('static', filename='/books.jpg')}}" >
+               <h1>ISSA BOOK SHOP!</h1>
+           </header>
+           <div class="navmenu">
+               <a href="https://www.waterstones.com/books/bestsellers"> Best Sellers</a>
+               <a href="https://www.waterstones.com/category/crime-thrillers-mystery">Crime</a>
+               <a href="https://www.waterstones.com/category/fiction"> Fiction</a>
+               <a href="https://www.waterstones.com/category/childrens-teenage"> Children / Teen Fiction</a>
+               
+            </div> 
+           <main>
+            
+                <h2> Customer Orders </h2>
+                
+                    <button class="searchbar" type="text">Search Customer Orders</button>
+               
+            
+            {% for order in orders_var %}
+            <div>
+
+            <p>
+                {{order.title}} <b>{{order.customer_name}}</b>
+            </p>
+            <a href="{{ url_for('eren_order', id=order.id) }}"> View Order</a>
+            </div>
+            {% endfor %}
+        </main>
+    <footer>
+    <h2> We Got Books </h2>
+    </footer>
+</html>
+
+
+
+
+
+
+
+</html>

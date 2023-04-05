@@ -1,0 +1,92 @@
+html, body , #grid-container {
+    height: 100%;
+}
+header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-area: header;
+
+
+}
+
+header > h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Dancing Script;
+}
+
+header > img {
+    display: grid;
+    image-rendering: crisp-edges;
+       
+    
+}
+main > h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main > div > p > b{
+    font-size: larger;
+
+    
+}
+.searchbar{
+    background-color: lightseagreen;
+    color: black;
+    font-size: large;
+    height: 30px;
+    width: 300px;
+    border: 1px;
+    border-radius: 1px;
+    cursor: pointer;
+    
+    
+
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    font-family: 'Notable';
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+}
+
+.navmenu{
+    display: grid;
+    grid-area: navigation;
+    background-color: aquamarine;
+    color: palevioletred;
+    font-size: medium;
+    font-weight: lighter;
+    font-style: italic;
+
+}
+
+.navmenu > a{
+    color: palevioletred;
+    text-decoration: none;
+
+}
+
+
+.navmenu > a:hover{
+    text-decoration: underline;
+
+}
+
+#grid-container{
+    display:grid;
+    grid-template-areas:
+    "header header"
+    "navigation main"
+    "footer footer";
+    grid-template-rows: 3fr 5fr 1fr ;
+    grid-template-columns: 10% 90%;
+}
